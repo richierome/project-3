@@ -1,0 +1,18 @@
+body{
+    background-color: black;
+}
+
+.music{
+    width:100% ;
+    height:45px;
+    opacity: .10;
+    background-color: black;
+    
+}
+/* .music:hover{
+    box-shadow: 15px 15px 15px rgb(245, 41, 41); 
+    
+    cursor: pointer;
+    transition: box-shadow .0s, transform 0.55s;
+
+} */
