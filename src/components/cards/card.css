@@ -7,8 +7,9 @@
      For the following settings we set 100%, but it can be higher if needed 
     See the answer's update  */
 
-    left: -135%;
-    right: -83%;
+    left: -110%;
+    right: -110%;
+    border-radius: 50%;
      /* top: -100%;
     bottom: -100%;  
      */
@@ -22,12 +23,13 @@
 
 
 .portrait {
-    width: 500px;
-    height: 315px;
+    width: 375px;
+    height: 195px;
     overflow: hidden;
     margin: 10px;
     position: relative;
     background-position: center;
+    margin-bottom: -5px;
   
 }
 
@@ -38,4 +40,9 @@
     transition: box-shadow .0s, transform 0.55s;
     opacity: .8;
     
+} 
+.planet-names{
+    color:red;
+    font-family: 'Butcherman', cursive;
+    text-align: center;
 }
