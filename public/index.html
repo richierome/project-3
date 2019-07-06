@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Butcherman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">.
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,10 +21,59 @@
       Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+    --><script>
+       var spaceShip = {
+            noradNumber: 25544,
+            name: "alien",
+            longitude: 0
+        }
+        
+        var screenWidth = 1100;
+        function floatSpaceShip(){
+        spaceShip.longitude += 3;
+    if ( spaceShip.longitude > screenWidth){
+       spaceShip.longitude = -3 * screenWidth;
+      
+    }
+        console.log("Longitude", spaceShip.longitude);
+        var s = document.getElementById("alienImage");
+        s.style.right=spaceShip.longitude + "px";
+        setTimeout("floatSpaceShip();", 0);
+        }
+    
+
+        var satellite = {
+            noradNumber: 25544,
+            name: "International Space Station",
+            longitude: 0
+        }
+        
+        var screenWidth = 1100;
+        function floatSatellite(){
+        satellite.longitude += 3;
+    if ( satellite.longitude > screenWidth){
+       satellite.longitude = -3 * screenWidth;
+      
+    }
+        console.log("Longitude", satellite.longitude);
+        var d = document.getElementById("issImage");
+        d.style.left =satellite.longitude + "px";
+        setTimeout("floatSatellite();", 0);
+      
+        }
+    
+    </script>
     <title>React App</title>
+    
   </head>
-  <body>
+
+  <body onLoad="floatSatellite(); floatSpaceShip();"  >
+   
+    
+    <img src="./images/astro4.png" id="issImage" />
+
+    <img src="./images/alien.png"  id="alienImage" />
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--

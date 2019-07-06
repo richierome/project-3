@@ -91,7 +91,7 @@ class App extends Component {
       else {
       
       
-        alert("Almost, lets check out the moon then Try it Again!")
+        alert("Almost, lets check out the Moon then Try it Again!")
         this.setState({
           currentScore: 0,
           characters: characters.map(character => ({...character})),
